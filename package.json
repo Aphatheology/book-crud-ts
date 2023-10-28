@@ -7,9 +7,9 @@
   "license": "MIT",
   "main": "./dist/server.js",
   "scripts": {
-    "test": "ts-node ./lib/server.ts",
-    "dev": "cross-env NODE_ENV=production tsc-watch --onSuccess \"node ./dist/server.js\"",
-    "prod": "tsc && node ./dist/server.js"
+    "test": "ts-node ./dist/server.ts",
+    "dev": "cross-env NODE_ENV=development tsc-watch --onSuccess \"node ./dist/server.js\"",
+    "prod": "cross-env NODE_ENV=production tsc && node ./dist/server.js"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
