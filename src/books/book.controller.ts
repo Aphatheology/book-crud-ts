@@ -24,6 +24,6 @@ export const updateBook = catchAsync(async (req: Request, res: Response) => {
 });
 
 export const deleteBook = catchAsync(async (req: Request, res: Response) => {
-  const book = await bookService.deleteBookById(req.params.bookId);
-  res.send(book);
+  await bookService.deleteBookById(req.params.bookId);
+  res.send();
 });

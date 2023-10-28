@@ -14,7 +14,7 @@ const bookSchema = new mongoose.Schema<IBook>(
       trim: true,
     },
     yop: {
-      type: String,
+      type: Number,
       required: false,
       trim: true,
     }

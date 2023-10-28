@@ -17,7 +17,7 @@ const logger = winston.createLogger({
   level: config.env === 'development' ? 'debug' : 'info',
   format: winston.format.combine(
     enumerateErrorFormat(),
-    config.env === 'production' ? winston.format.colorize() : winston.format.uncolorize(),
+    config.env === 'development' ? winston.format.colorize() : winston.format.uncolorize(),
     winston.format.splat(),
     winston.format.printf((info: LoggingInfo) => `${info.level}: ${info.message}`)
   ),

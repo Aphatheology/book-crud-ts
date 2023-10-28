@@ -58,12 +58,12 @@ export const updateBookById = async (
 /**
  * Delete book by id
  * @param {mongoose.Types.ObjectId | string} bookId
- * @returns {Promise<IBook | null>}
+ * @returns {Promise<void>}
  */
-export const deleteBookById = async (bookId: mongoose.Types.ObjectId | string): Promise<IBook | null> => {
+export const deleteBookById = async (bookId: mongoose.Types.ObjectId | string): Promise<void> => {
   const book = await getBookById(bookId);
   if (book) {
     await book.deleteOne();
   }
-  return book;
+  return;
 };

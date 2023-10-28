@@ -5,7 +5,7 @@ export const createBook = {
   body: Joi.object().keys({
     title: Joi.string().required(),
     author: Joi.string().required(),
-    yop: Joi.string(),
+    yop: Joi.number(),
   }),
 };
 
@@ -23,7 +23,7 @@ export const updateBook = {
     .keys({
       title: Joi.string(),
       author: Joi.string(),
-      yop: Joi.string(),
+      yop: Joi.number(),
     })
     .min(1),
 };
